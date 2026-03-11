@@ -1,0 +1,12 @@
+try:
+    bill = float(input("Enter the bill amount: "))
+    tip_percent = float(input("Enter the tip percentage: "))
+
+    tip = bill * (tip_percent / 100)
+    total = bill + tip
+
+    print(f"On a bill of ${bill:.2f}, a {tip_percent}% tip is ${tip:.2f}.")
+    print(f"Total amount: ${total:.2f}")
+
+except ValueError:
+    print("Please enter valid numbers.")
