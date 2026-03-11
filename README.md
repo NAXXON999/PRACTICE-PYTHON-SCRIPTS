@@ -1,117 +1,74 @@
-# Even or Odd Checker (Python)
+# Tip Calculator (Python)
 
-A simple Python program that determines whether a number entered by the user is **even or odd**.
-
-This beginner-friendly project helps new programmers practice **user input, conditionals, and the modulo operator** in Python.
-
----
+A simple Python program that calculates a tip based on a bill amount.
+This project is designed for beginners learning **user input, variables, and basic math in Python**.
 
 ## Features
 
-* Prompts the user to enter a number
-* Uses Python’s modulo operator `%` to check divisibility
-* Determines whether the number is **even** or **odd**
-* Displays the result in a clear message
-
----
+* Asks the user for the bill amount
+* Calculates a tip percentage
+* Displays the tip clearly in one sentence
+* Beginner-friendly Python code
 
 ## Example Output
 
 ```
-Enter a number: 7
-7 is an odd number.
+Enter the bill amount: 45
+On a bill of $45.00, a 20% tip is $9.00
 ```
 
-```
-Enter a number: 12
-12 is an even number.
-```
+## How It Works
 
----
+1. The program asks the user to enter the bill amount.
+2. The input is converted to a number using `float()`.
+3. A tip percentage is applied.
+4. The result is printed in a clear sentence.
 
 ## Python Code
 
 ```python
-number = int(input("Enter a number: "))
+bill = float(input("Enter the bill amount: "))
+tip_percent = 0.20
 
-if number % 2 == 0:
-    print(f"{number} is an even number.")
-else:
-    print(f"{number} is an odd number.")
+tip = bill * tip_percent
+
+print(f"On a bill of ${bill:.2f}, a 20% tip is ${tip:.2f}")
 ```
-
----
-
-## How It Works
-
-The program uses the **modulo operator `%`**, which returns the remainder after division.
-
-* If a number divided by **2** has a remainder of **0**, the number is **even**.
-* If the remainder is **1**, the number is **odd**.
-
-Example:
-
-```
-10 % 2 = 0  → Even
-7 % 2 = 1   → Odd
-```
-
----
 
 ## Requirements
 
 * Python 3.x
 
-Check your Python version:
+Check your version:
 
 ```
 python3 --version
 ```
 
----
+## How to Run
 
-## How to Run the Program
-
-1. Save the file as:
-
-```
-even_or_odd.py
-```
-
-2. Open a terminal in the folder containing the file.
-
+1. Save the file as `tip_calculator.py`
+2. Open a terminal
 3. Run the program:
 
 ```
-python3 even_or_odd.py
+python3 tip_calculator.py
 ```
-
----
 
 ## What This Project Teaches
 
-This project helps beginners practice several important Python concepts:
-
-* `input()` for gathering user input
-* `int()` for converting text to numbers
-* The `%` modulo operator
-* `if` / `else` conditional logic
-* Using f-strings for clear output
-
----
+* `input()` for user interaction
+* `float()` for number conversion
+* Basic math operations
+* f-strings for clean output formatting
 
 ## Future Improvements
 
-Possible improvements to this program:
-
-* Allow the user to check multiple numbers
-* Add input validation to handle invalid entries
-* Create a loop that keeps running until the user exits
-
----
+* Let the user choose the tip percentage
+* Split the bill between multiple people
+* Add error handling for invalid input
 
 ## License
 
-This project is open-source and intended for **learning and educational use**.
-
+This project is open-source and free to use for learning.
 
