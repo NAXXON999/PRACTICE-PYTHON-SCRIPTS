@@ -1,26 +1,30 @@
-# Add Two Numbers (Python)
+# Even or Odd Checker (Python)
 
-A simple Python program that asks the user for two numbers and prints their sum.
+A simple Python program that determines whether a number entered by the user is **even or odd**.
 
-This project is designed for beginners learning the fundamentals of **Python input, variables, and arithmetic operations**.
+This beginner-friendly project helps new programmers practice **user input, conditionals, and the modulo operator** in Python.
 
 ---
 
 ## Features
 
-* Prompts the user to enter two numbers
-* Converts input to numeric values
-* Calculates the sum
-* Displays the result in a clear sentence
+* Prompts the user to enter a number
+* Uses Python’s modulo operator `%` to check divisibility
+* Determines whether the number is **even** or **odd**
+* Displays the result in a clear message
 
 ---
 
 ## Example Output
 
 ```
-Enter the first number: 5
-Enter the second number: 7
-The total is 12
+Enter a number: 7
+7 is an odd number.
+```
+
+```
+Enter a number: 12
+12 is an even number.
 ```
 
 ---
@@ -28,23 +32,29 @@ The total is 12
 ## Python Code
 
 ```python
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+number = int(input("Enter a number: "))
 
-total = num1 + num2
-
-print(f"The total is {total}")
+if number % 2 == 0:
+    print(f"{number} is an even number.")
+else:
+    print(f"{number} is an odd number.")
 ```
 
 ---
 
 ## How It Works
 
-1. The program asks the user for the first number.
-2. The program asks for the second number.
-3. Both inputs are converted into numbers using `float()`.
-4. The program adds the two numbers together.
-5. The result is displayed using an **f-string**.
+The program uses the **modulo operator `%`**, which returns the remainder after division.
+
+* If a number divided by **2** has a remainder of **0**, the number is **even**.
+* If the remainder is **1**, the number is **odd**.
+
+Example:
+
+```
+10 % 2 = 0  → Even
+7 % 2 = 1   → Odd
+```
 
 ---
 
@@ -52,7 +62,7 @@ print(f"The total is {total}")
 
 * Python 3.x
 
-Check your version:
+Check your Python version:
 
 ```
 python3 --version
@@ -65,44 +75,43 @@ python3 --version
 1. Save the file as:
 
 ```
-add_two_numbers.py
+even_or_odd.py
 ```
 
-2. Open a terminal in the folder where the file is saved.
+2. Open a terminal in the folder containing the file.
 
 3. Run the program:
 
 ```
-python3 add_two_numbers.py
+python3 even_or_odd.py
 ```
 
 ---
 
 ## What This Project Teaches
 
-This small project introduces several important Python concepts:
+This project helps beginners practice several important Python concepts:
 
-* `input()` for user interaction
-* `float()` for converting input into numbers
-* Variable assignment
-* Basic arithmetic operations
-* Using f-strings for readable output
+* `input()` for gathering user input
+* `int()` for converting text to numbers
+* The `%` modulo operator
+* `if` / `else` conditional logic
+* Using f-strings for clear output
 
 ---
 
 ## Future Improvements
 
-Possible upgrades to this project include:
+Possible improvements to this program:
 
-* Allow adding **multiple numbers**
-* Add **subtraction, multiplication, and division**
-* Add **error handling for invalid input**
+* Allow the user to check multiple numbers
+* Add input validation to handle invalid entries
+* Create a loop that keeps running until the user exits
 
 ---
 
 ## License
 
-This project is open-source and intended for **learning and educational purposes**.
-
+This project is open-source and intended for **learning and educational use**.
 
 
