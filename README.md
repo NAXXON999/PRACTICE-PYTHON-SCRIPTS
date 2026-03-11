@@ -1,39 +1,52 @@
-# Tip Calculator (Python)
+# Add Two Numbers (Python)
 
-A simple Python program that calculates a tip based on a bill amount.
-This project is designed for beginners learning **user input, variables, and basic math in Python**.
+A simple Python program that asks the user for two numbers and prints their sum.
+
+This project is designed for beginners learning the fundamentals of **Python input, variables, and arithmetic operations**.
+
+---
 
 ## Features
 
-* Asks the user for the bill amount
-* Calculates a tip percentage
-* Displays the tip clearly in one sentence
-* Beginner-friendly Python code
+* Prompts the user to enter two numbers
+* Converts input to numeric values
+* Calculates the sum
+* Displays the result in a clear sentence
+
+---
 
 ## Example Output
 
 ```
-Enter the bill amount: 45
-On a bill of $45.00, a 20% tip is $9.00
+Enter the first number: 5
+Enter the second number: 7
+The total is 12
 ```
 
-## How It Works
-
-1. The program asks the user to enter the bill amount.
-2. The input is converted to a number using `float()`.
-3. A tip percentage is applied.
-4. The result is printed in a clear sentence.
+---
 
 ## Python Code
 
 ```python
-bill = float(input("Enter the bill amount: "))
-tip_percent = 0.20
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 
-tip = bill * tip_percent
+total = num1 + num2
 
-print(f"On a bill of ${bill:.2f}, a 20% tip is ${tip:.2f}")
+print(f"The total is {total}")
 ```
+
+---
+
+## How It Works
+
+1. The program asks the user for the first number.
+2. The program asks for the second number.
+3. Both inputs are converted into numbers using `float()`.
+4. The program adds the two numbers together.
+5. The result is displayed using an **f-string**.
+
+---
 
 ## Requirements
 
@@ -45,30 +58,51 @@ Check your version:
 python3 --version
 ```
 
-## How to Run
+---
 
-1. Save the file as `tip_calculator.py`
-2. Open a terminal
+## How to Run the Program
+
+1. Save the file as:
+
+```
+add_two_numbers.py
+```
+
+2. Open a terminal in the folder where the file is saved.
+
 3. Run the program:
 
 ```
-python3 tip_calculator.py
+python3 add_two_numbers.py
 ```
+
+---
 
 ## What This Project Teaches
 
+This small project introduces several important Python concepts:
+
 * `input()` for user interaction
-* `float()` for number conversion
-* Basic math operations
-* f-strings for clean output formatting
+* `float()` for converting input into numbers
+* Variable assignment
+* Basic arithmetic operations
+* Using f-strings for readable output
+
+---
 
 ## Future Improvements
 
-* Let the user choose the tip percentage
-* Split the bill between multiple people
-* Add error handling for invalid input
+Possible upgrades to this project include:
+
+* Allow adding **multiple numbers**
+* Add **subtraction, multiplication, and division**
+* Add **error handling for invalid input**
+
+---
 
 ## License
 
-This project is open-source and free to use for learning.
+This project is open-source and intended for **learning and educational purposes**.
+
+
 
