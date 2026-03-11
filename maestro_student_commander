@@ -1,0 +1,90 @@
+
+---
+
+# Why developers would care
+Because it’s not framed as “I am learning Python.”
+It’s framed as:
+**“I built a practical CLI for students who code.”**
+
+That’s a completely different signal.
+
+---
+
+# What to do after uploading
+1. Upload `app.py`
+2. Upload `README.md`
+3. Add `data.json` with this inside:
+
+```json
+{
+    "tasks": [],
+    "sessions": [],
+    "streak": 0,
+    "last_study_date": null
+}
+import datetime
+
+tasks = []
+study_hours = 0
+
+
+def add_task():
+    task = input("Enter a study task: ")
+    tasks.append(task)
+    print("Task added.\n")
+
+
+def view_tasks():
+    if not tasks:
+        print("No tasks yet.\n")
+    else:
+        print("\nStudy Tasks:")
+        for i, task in enumerate(tasks, 1):
+            print(f"{i}. {task}")
+        print()
+
+
+def log_study():
+    global study_hours
+    hours = float(input("Enter hours studied today: "))
+    study_hours += hours
+    print(f"Total study hours: {study_hours}\n")
+
+
+def show_summary():
+    today = datetime.date.today()
+    print("\nStudy Summary")
+    print("----------------")
+    print("Date:", today)
+    print("Total Study Hours:", study_hours)
+    print("Tasks:", len(tasks))
+    print()
+
+
+def menu():
+    while True:
+        print("Maestro Study Tracker")
+        print("1. Add Study Task")
+        print("2. View Tasks")
+        print("3. Log Study Hours")
+        print("4. Show Summary")
+        print("5. Exit")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            add_task()
+        elif choice == "2":
+            view_tasks()
+        elif choice == "3":
+            log_study()
+        elif choice == "4":
+            show_summary()
+        elif choice == "5":
+            print("Good luck studying.")
+            break
+        else:
+            print("Invalid option.\n")
+
+
+menu()
